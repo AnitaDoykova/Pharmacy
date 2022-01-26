@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy", "Pharmacy\Pharmacy.csproj", "{74AE7C4C-4157-40A4-BE36-0C7A5AB2E048}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F564E69F-F04C-49B1-B636-D61362D224A8} = {F564E69F-F04C-49B1-B636-D61362D224A8}
+		{937126C5-4F5C-431D-8D82-EB94E0D7B757} = {937126C5-4F5C-431D-8D82-EB94E0D7B757}
+		{0A5202E7-3732-431F-A1B1-06A3EA928C67} = {0A5202E7-3732-431F-A1B1-06A3EA928C67}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.Models", "Pharmacy.Models\Pharmacy.Models.csproj", "{937126C5-4F5C-431D-8D82-EB94E0D7B757}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.DL", "Pharmacy.DL\Pharmacy.DL.csproj", "{F564E69F-F04C-49B1-B636-D61362D224A8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{937126C5-4F5C-431D-8D82-EB94E0D7B757} = {937126C5-4F5C-431D-8D82-EB94E0D7B757}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.BL", "Pharmacy.BL\Pharmacy.BL.csproj", "{0A5202E7-3732-431F-A1B1-06A3EA928C67}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F564E69F-F04C-49B1-B636-D61362D224A8} = {F564E69F-F04C-49B1-B636-D61362D224A8}
+		{937126C5-4F5C-431D-8D82-EB94E0D7B757} = {937126C5-4F5C-431D-8D82-EB94E0D7B757}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74AE7C4C-4157-40A4-BE36-0C7A5AB2E048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74AE7C4C-4157-40A4-BE36-0C7A5AB2E048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74AE7C4C-4157-40A4-BE36-0C7A5AB2E048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74AE7C4C-4157-40A4-BE36-0C7A5AB2E048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{937126C5-4F5C-431D-8D82-EB94E0D7B757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937126C5-4F5C-431D-8D82-EB94E0D7B757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937126C5-4F5C-431D-8D82-EB94E0D7B757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937126C5-4F5C-431D-8D82-EB94E0D7B757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F564E69F-F04C-49B1-B636-D61362D224A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F564E69F-F04C-49B1-B636-D61362D224A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F564E69F-F04C-49B1-B636-D61362D224A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F564E69F-F04C-49B1-B636-D61362D224A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5202E7-3732-431F-A1B1-06A3EA928C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5202E7-3732-431F-A1B1-06A3EA928C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5202E7-3732-431F-A1B1-06A3EA928C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5202E7-3732-431F-A1B1-06A3EA928C67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFA9BC03-4FDA-492E-A96F-330858F82125}
+	EndGlobalSection
+EndGlobal
