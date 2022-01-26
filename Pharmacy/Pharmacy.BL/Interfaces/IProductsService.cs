@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Pharmacy.Models.DTO;
 
-namespace Pharmacy.DL.Interfaces
+
+namespace Pharmacy.BL.Interfaces
 {
-    public interface IProductsRepository
+    public interface IProductsService
     {
         Products Create(Products products);
 
