@@ -1,0 +1,12 @@
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\bin\Debug\net5.0\Pharmacy.Models.deps.json
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\bin\Debug\net5.0\Pharmacy.Models.dll
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\bin\Debug\net5.0\ref\Pharmacy.Models.dll
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\bin\Debug\net5.0\Pharmacy.Models.pdb
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\obj\Debug\net5.0\Pharmacy.Models.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\obj\Debug\net5.0\Pharmacy.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\obj\Debug\net5.0\Pharmacy.Models.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\obj\Debug\net5.0\Pharmacy.Models.AssemblyInfo.cs
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\obj\Debug\net5.0\Pharmacy.Models.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\obj\Debug\net5.0\Pharmacy.Models.dll
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\obj\Debug\net5.0\ref\Pharmacy.Models.dll
+C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.Models\obj\Debug\net5.0\Pharmacy.Models.pdb

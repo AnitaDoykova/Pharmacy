@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Pharmacy.BL\Pharmacy.BL.csproj" />
     <ProjectReference Include="..\Pharmacy.DL\Pharmacy.DL.csproj" />
     <ProjectReference Include="..\Pharmacy.Models\Pharmacy.Models.csproj" />

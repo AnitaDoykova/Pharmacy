@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using Pharmacy.DL.Interfaces;
 using Pharmacy.BL.Interfaces;
 using Pharmacy.Models.DTO;
+using Serilog;
 
 namespace Pharmacy.BL.Services
 {
-    public class EmployeeService
+    public class EmployeeService : IEmployeeService
     {
         private readonly IEmployeeRepository _employeerepository;
+        private readonly ILogger _logger;
 
-        public EmployeeService(IEmployeeRepository employeerepository)
+        public EmployeeService(IEmployeeRepository employeerepository, ILogger logger)
         {
             _employeerepository = employeerepository;
+            _logger = logger;
         }
         public Employee Create(Employee employee)
         {

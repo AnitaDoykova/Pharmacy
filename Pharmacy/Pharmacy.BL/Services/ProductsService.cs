@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 using Pharmacy.DL.Interfaces;
 using Pharmacy.BL.Interfaces;
 using Pharmacy.Models.DTO;
+using Serilog;
 
 namespace Pharmacy.BL.Services
 {
-    public class ProductsService
+    public class ProductsService : IProductsService
     {
         private readonly IProductsRepository _productsrepository;
-
-        public ProductsService(IProductsRepository productsrepository)
+        private readonly ILogger _logger;
+        public ProductsService(IProductsRepository productsrepository, ILogger logger)
         {
             _productsrepository = productsrepository;
+            _logger = logger;
         }
         public Products Create(Products products)
         {

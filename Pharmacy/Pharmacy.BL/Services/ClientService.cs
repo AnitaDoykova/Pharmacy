@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using Pharmacy.DL.Interfaces;
 using Pharmacy.BL.Interfaces;
 using Pharmacy.Models.DTO;
+using Serilog;
 
 namespace Pharmacy.BL.Services
 {
-    public class ClientService
+    public class ClientService : IClientService
     {
         private readonly IClientRepository _clientrepository;
+        private readonly ILogger _logger;
 
-        public ClientService(IClientRepository clientrepository)
+        public ClientService(IClientRepository clientrepository, ILogger logger)
         {
             _clientrepository = clientrepository;
+            _logger = logger;
         }
         public Client Create(Client client)
         {

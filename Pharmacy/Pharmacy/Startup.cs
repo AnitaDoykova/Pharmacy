@@ -8,6 +8,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Pharmacy.BL.Interfaces;
+using Pharmacy.DL.Interfaces;
+using Pharmacy.BL.Services;
+using Pharmacy.DL.Repositories;
+using Microsoft.OpenApi.Models;
+using Serilog;
+
 
 namespace Pharmacy
 {
@@ -24,24 +31,50 @@ namespace Pharmacy
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddSingleton(Log.Logger);
+
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddSingleton<IProductsRepository, ProductsInMemoryRepository>();
+            services.AddSingleton<IClientRepository, ClientInMemoryRepository>();
+            services.AddSingleton<IShiftRepository, ShiftInMemoryRepository>();
+            services.AddSingleton<IEmployeeRepository, EmployeeInMemoryRepository>();
+
+            services.AddSingleton<IProductsService, ProductsService>();
+            services.AddSingleton<IClientService, ClientService>();
+            services.AddSingleton<IShiftService, ShiftService>();
+            services.AddSingleton<IEmployeeService, EmployeeService>();
+
+
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pharmacy", Version = "v1" });
+            });
+
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger logger)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pharmacy v1"));
             }
-            else
-            {
-                app.UseExceptionHandler("/Error");
+            
+            //else
+            //{
+               // app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+               // app.UseHsts();
+           // }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+           // app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -49,7 +82,9 @@ namespace Pharmacy
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                // endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health");
             });
         }
     }
