@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Pharmacy.BL.Interfaces;
 using Pharmacy.Models.DTO;
 using Pharmacy.Models.Requests;
@@ -86,6 +82,8 @@ namespace Pharmacy.Controllers
             if (searchShift == null) return NotFound(shiftRequests.Id);
 
             searchShift.Name = shiftRequests.Name;
+
+            searchShift.Employees = shiftRequests.Employees;
 
             var result = _shiftService.Update(searchShift);
 

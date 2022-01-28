@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Pharmacy.BL.Interfaces;
 using Pharmacy.Models.DTO;
 using Pharmacy.Models.Requests;
@@ -86,6 +82,8 @@ namespace Pharmacy.Controllers
             if (searchProducts == null) return NotFound(productsRequests.Id);
 
             searchProducts.Name = productsRequests.Name;
+
+            searchProducts.Price = productsRequests.Price;
 
             var result = _productsService.Update(searchProducts);
 

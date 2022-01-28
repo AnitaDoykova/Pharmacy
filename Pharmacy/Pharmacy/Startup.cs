@@ -1,19 +1,16 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Pharmacy.BL.Interfaces;
 using Pharmacy.DL.Interfaces;
 using Pharmacy.BL.Services;
 using Pharmacy.DL.Repositories;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Pharmacy.Extensions;
+using FluentValidation.AspNetCore;
 
 
 namespace Pharmacy
@@ -30,7 +27,7 @@ namespace Pharmacy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            //services.AddRazorPages();
 
             services.AddSingleton(Log.Logger);
 
@@ -46,6 +43,7 @@ namespace Pharmacy
             services.AddSingleton<IShiftService, ShiftService>();
             services.AddSingleton<IEmployeeService, EmployeeService>();
 
+            services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
 
 
             services.AddSwaggerGen(c =>
@@ -65,16 +63,10 @@ namespace Pharmacy
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pharmacy v1"));
             }
-            
-            //else
-            //{
-               // app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-               // app.UseHsts();
-           // }
+
+            app.ConfigureExceptionHadler(logger);
 
             app.UseHttpsRedirection();
-           // app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -82,7 +74,6 @@ namespace Pharmacy
 
             app.UseEndpoints(endpoints =>
             {
-                // endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapHealthChecks("/health");
             });

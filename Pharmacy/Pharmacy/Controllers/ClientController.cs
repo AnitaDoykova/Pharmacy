@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Pharmacy.BL.Interfaces;
 using Pharmacy.Models.DTO;
 using Pharmacy.Models.Requests;
@@ -86,6 +82,8 @@ namespace Pharmacy.Controllers
             if (searchClient == null) return NotFound(clientRequests.Id);
 
             searchClient.Name = clientRequests.Name;
+
+            searchClient.MoneySpend = clientRequests.MoneySpend;
 
             var result = _clientService.Update(searchClient);
 

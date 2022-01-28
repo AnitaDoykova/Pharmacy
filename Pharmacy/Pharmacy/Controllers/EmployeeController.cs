@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using AutoMapper;
 using Pharmacy.BL.Interfaces;
 using Pharmacy.Models.DTO;
@@ -86,6 +83,8 @@ namespace Pharmacy.Controllers
             if (searchEmployee == null) return NotFound(employeeRequests.Id);
 
             searchEmployee.Name = employeeRequests.Name;
+
+            searchEmployee.Salary = employeeRequests.Salary;
 
             var result = _employeeService.Update(searchEmployee);
 
