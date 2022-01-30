@@ -14,6 +14,12 @@ namespace Pharmacy.BL.Services
     {
         private readonly IEmployeeRepository _employeerepository;
         private readonly ILogger _logger;
+        private IEmployeeRepository @object;
+
+        public EmployeeService(IEmployeeRepository @object)
+        {
+            this.@object = @object;
+        }
 
         public EmployeeService(IEmployeeRepository employeerepository, ILogger logger)
         {

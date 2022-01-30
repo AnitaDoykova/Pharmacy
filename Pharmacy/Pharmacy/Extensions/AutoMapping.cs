@@ -9,17 +9,17 @@ namespace Pharmacy.Extensions
     {
         public AutoMapping()
         {
-            CreateMap<Client, ClientResponse>();
-            CreateMap<ClientRequests, Client>();
+            CreateMap<Client, ClientResponse>().ReverseMap();
+            CreateMap<ClientRequests, Client>().ReverseMap();
             CreateMap<ClientUpdateRequests, Client>().ReverseMap();
-            CreateMap<Employee, EmployeeResponse>();
-            CreateMap<EmployeeRequests, Employee>();
+            CreateMap<Employee, EmployeeResponse>().ReverseMap();
+            CreateMap<EmployeeRequests, Employee>().ReverseMap();
             CreateMap<EmployeeUpdateRequests, Employee>().ReverseMap();
-            CreateMap<Products, ProductsResponse>();
-            CreateMap<ProductsRequests, Products>();
+            CreateMap<Products, ProductsResponse>().ReverseMap();
+            CreateMap<ProductsRequests, Products>().ReverseMap();
             CreateMap<ProductsUpdateRequests, Products>().ReverseMap();
-            CreateMap<Shift, ShiftResponse>();
-            CreateMap<ShiftRequests, Shift>();
+            CreateMap<Shift, ShiftResponse>().ReverseMap();
+            CreateMap<ShiftRequests, Shift>().ReverseMap();
             CreateMap<ShiftUpdateRequests, Shift>().ReverseMap();
 
             
