@@ -54,7 +54,7 @@ namespace Pharmacy.Controllers
 
             var result = _shiftService.Create(shift);
 
-            return Ok(shift);
+            return Ok(result);
 
         }
 

@@ -55,7 +55,7 @@ namespace Pharmacy.Controllers
 
             var result = _employeeService.Create(employee);
 
-            return Ok(employee);
+            return Ok(result);
 
         }
 

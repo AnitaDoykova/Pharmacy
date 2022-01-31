@@ -54,7 +54,7 @@ namespace Pharmacy.Controllers
 
             var result = _clientService.Create(client);
 
-            return Ok(client);
+            return Ok(result);
 
         }
 
