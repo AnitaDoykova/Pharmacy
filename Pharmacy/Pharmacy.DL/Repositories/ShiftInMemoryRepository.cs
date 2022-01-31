@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Pharmacy.Models.DTO;
 using Pharmacy.DL.InMemoryDb;
 using Pharmacy.DL.Interfaces;

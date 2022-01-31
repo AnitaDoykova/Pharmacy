@@ -12,4 +12,3 @@ C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.DL\obj\Debug\net5.0\Ph
 C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.DL\obj\Debug\net5.0\Pharmacy.DL.dll
 C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.DL\obj\Debug\net5.0\ref\Pharmacy.DL.dll
 C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.DL\obj\Debug\net5.0\Pharmacy.DL.pdb
-C:\Users\PC\Desktop\c#net core\Pharmacy\Pharmacy\Pharmacy.DL\obj\Debug\net5.0\Pharmacy.DL.csproj.CopyComplete
